@@ -6,6 +6,8 @@ public class GameFinish : MonoBehaviour {
     public Text m_textWin;
     public string m_textToDisplay = "You Win!";
 
+    public GameObject m_menuInGame;
+
 
     private void Awake()
     {
