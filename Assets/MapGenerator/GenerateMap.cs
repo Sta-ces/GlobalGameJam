@@ -31,6 +31,8 @@ public class GenerateMap : MonoBehaviour {
                     Vector3 tilePosition = new Vector3(-m_MapSize.x / 2 + 0.5f + x, -m_MapSize.y / 2 + 0.5f + y, -m_MapSize.z / 2 + 0.5f + z);
                     GameObject newTile = Instantiate(m_Floor, tilePosition, Quaternion.identity, mapParent);
                     newTile.transform.localScale = Vector3.one * (1 - m_OutlinePercent);
+                    if (y == m_MapSize.y - 1)
+                        newTile.gameObject.name = "Floor_topPlateform";
                 }
             }
         }
