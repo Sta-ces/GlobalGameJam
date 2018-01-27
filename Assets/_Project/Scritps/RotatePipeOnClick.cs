@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.Events;
+﻿using UnityEngine;
 
 public class RotatePipeOnClick : MonoBehaviour {
 
@@ -9,6 +6,6 @@ public class RotatePipeOnClick : MonoBehaviour {
 
     public void OnMouseDown()
     {
-        gameObject.transform.Rotate(m_angleOfRotation, transform.rotation.y, transform.rotation.z);
+        gameObject.transform.Rotate(m_angleOfRotation, transform.rotation.y, transform.rotation.z, Space.Self);
     }
 }

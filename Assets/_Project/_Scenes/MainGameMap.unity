@@ -813,7 +813,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: 971f887c79ddebf43909921a1e0e27ab, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -0.8465164
+      value: -1.098
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 971f887c79ddebf43909921a1e0e27ab, type: 2}
       propertyPath: m_LocalPosition.y
@@ -825,19 +825,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 971f887c79ddebf43909921a1e0e27ab, type: 2}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 971f887c79ddebf43909921a1e0e27ab, type: 2}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 971f887c79ddebf43909921a1e0e27ab, type: 2}
       propertyPath: m_LocalRotation.z
-      value: 0.70710576
+      value: -0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 971f887c79ddebf43909921a1e0e27ab, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 0.7071079
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 971f887c79ddebf43909921a1e0e27ab, type: 2}
       propertyPath: m_RootOrder
@@ -857,7 +857,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 971f887c79ddebf43909921a1e0e27ab, type: 2}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 90.00001
+      value: -90
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 971f887c79ddebf43909921a1e0e27ab, type: 2}
@@ -878,11 +878,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_angleOfRotation: 90
-  OnRotate:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: RotatePipeOnClick+OnClickRotate, Assembly-CSharp, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
+--- !u!114 &157477427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 157477421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8ebff90a13edcc4db4d2e75f5e7eaca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_pipeToTouch: {fileID: 497479228}
+  m_solved: 0
 --- !u!1 &177086825
 GameObject:
   m_ObjectHideFlags: 0
@@ -1221,11 +1229,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_angleOfRotation: 90
-  OnRotate:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: RotatePipeOnClick+OnClickRotate, Assembly-CSharp, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!1 &290467861
 GameObject:
   m_ObjectHideFlags: 0
@@ -1900,11 +1903,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_angleOfRotation: 90
-  OnRotate:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: RotatePipeOnClick+OnClickRotate, Assembly-CSharp, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!1 &400843606
 GameObject:
   m_ObjectHideFlags: 0
@@ -1986,6 +1984,10 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &452898768 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100000, guid: 40dc748b62c284942908a813a3725c69, type: 2}
+  m_PrefabInternal: {fileID: 2064962163}
 --- !u!1 &476273349
 GameObject:
   m_ObjectHideFlags: 0
@@ -2070,6 +2072,10 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 476273349}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &497479228 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100000, guid: 40dc748b62c284942908a813a3725c69, type: 2}
+  m_PrefabInternal: {fileID: 725789833}
 --- !u!1 &513329727
 GameObject:
   m_ObjectHideFlags: 0
@@ -2163,6 +2169,7 @@ GameObject:
   m_Component:
   - component: {fileID: 526678595}
   - component: {fileID: 526678594}
+  - component: {fileID: 526678596}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -2199,6 +2206,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &526678596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 526678593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ccbe1e0d1399444dabbc0aac596ff5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_textWin: {fileID: 1114200507}
 --- !u!1 &535077338
 GameObject:
   m_ObjectHideFlags: 0
@@ -3034,31 +3053,31 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: 40dc748b62c284942908a813a3725c69, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0.937
+      value: 0.98487127
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 40dc748b62c284942908a813a3725c69, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 1.679522
+      value: 1.6795166
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 40dc748b62c284942908a813a3725c69, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0.94
+      value: 0.8921317
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 40dc748b62c284942908a813a3725c69, type: 2}
       propertyPath: m_LocalRotation.x
-      value: 0.5
+      value: 0.000024760338
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 40dc748b62c284942908a813a3725c69, type: 2}
       propertyPath: m_LocalRotation.y
-      value: 0.49999702
+      value: 0.000024760338
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 40dc748b62c284942908a813a3725c69, type: 2}
       propertyPath: m_LocalRotation.z
-      value: 0.50000155
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 40dc748b62c284942908a813a3725c69, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 0.50000155
+      value: -0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 40dc748b62c284942908a813a3725c69, type: 2}
       propertyPath: m_RootOrder
@@ -3078,15 +3097,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 40dc748b62c284942908a813a3725c69, type: 2}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 180
+      value: 359.996
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 40dc748b62c284942908a813a3725c69, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -90
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 40dc748b62c284942908a813a3725c69, type: 2}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -90
+      value: -90.00001
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 40dc748b62c284942908a813a3725c69, type: 2}
       propertyPath: m_Name
@@ -3111,11 +3130,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_angleOfRotation: 90
-  OnRotate:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: RotatePipeOnClick+OnClickRotate, Assembly-CSharp, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
+--- !u!114 &748314762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 748314760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8ebff90a13edcc4db4d2e75f5e7eaca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_pipeToTouch: {fileID: 1122600845}
+  m_solved: 0
 --- !u!1 &779659658
 GameObject:
   m_ObjectHideFlags: 0
@@ -4126,11 +4153,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_angleOfRotation: 90
-  OnRotate:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: RotatePipeOnClick+OnClickRotate, Assembly-CSharp, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!1 &1006389668
 GameObject:
   m_ObjectHideFlags: 0
@@ -4312,27 +4334,27 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 40dc748b62c284942908a813a3725c69, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 1.679522
+      value: 1.679521
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 40dc748b62c284942908a813a3725c69, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -0.10786673
+      value: 0.04100427
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 40dc748b62c284942908a813a3725c69, type: 2}
       propertyPath: m_LocalRotation.x
-      value: -0.0000000745058
+      value: -0.70710564
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 40dc748b62c284942908a813a3725c69, type: 2}
       propertyPath: m_LocalRotation.y
-      value: -0.000002235174
+      value: 0.70710796
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 40dc748b62c284942908a813a3725c69, type: 2}
       propertyPath: m_LocalRotation.z
-      value: 0.7071079
+      value: 0.00000423938
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 40dc748b62c284942908a813a3725c69, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 0.7071057
+      value: 0.0000019446013
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 40dc748b62c284942908a813a3725c69, type: 2}
       propertyPath: m_RootOrder
@@ -4352,15 +4374,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 40dc748b62c284942908a813a3725c69, type: 2}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 180
+      value: 359.999
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 40dc748b62c284942908a813a3725c69, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -180
+      value: -180.00002
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 40dc748b62c284942908a813a3725c69, type: 2}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -90
+      value: -90.00001
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 40dc748b62c284942908a813a3725c69, type: 2}
       propertyPath: m_Name
@@ -4385,11 +4407,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_angleOfRotation: 90
-  OnRotate:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: RotatePipeOnClick+OnClickRotate, Assembly-CSharp, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
+--- !u!114 &1087746567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1087746565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8ebff90a13edcc4db4d2e75f5e7eaca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_pipeToTouch: {fileID: 1102229288}
+  m_solved: 0
 --- !u!1001 &1102229287
 Prefab:
   m_ObjectHideFlags: 0
@@ -4476,11 +4506,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_angleOfRotation: 90
-  OnRotate:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: RotatePipeOnClick+OnClickRotate, Assembly-CSharp, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
+--- !u!114 &1102229290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1102229288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8ebff90a13edcc4db4d2e75f5e7eaca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_pipeToTouch: {fileID: 748314760}
+  m_solved: 0
 --- !u!1 &1113629564
 GameObject:
   m_ObjectHideFlags: 0
@@ -4565,6 +4603,80 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1113629564}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1114200505
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1114200506}
+  - component: {fileID: 1114200508}
+  - component: {fileID: 1114200507}
+  m_Layer: 0
+  m_Name: You_win
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1114200506
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1114200505}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1463541093}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1114200507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1114200505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 64
+    m_FontStyle: 1
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 64
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: YOU WIN
+--- !u!222 &1114200508
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1114200505}
 --- !u!1001 &1122600844
 Prefab:
   m_ObjectHideFlags: 0
@@ -4643,11 +4755,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_angleOfRotation: 90
-  OnRotate:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: RotatePipeOnClick+OnClickRotate, Assembly-CSharp, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
+--- !u!114 &1122600847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1122600845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8ebff90a13edcc4db4d2e75f5e7eaca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_pipeToTouch: {fileID: 452898768}
+  m_solved: 0
 --- !u!1 &1125694794
 GameObject:
   m_ObjectHideFlags: 0
@@ -4818,11 +4938,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_angleOfRotation: 90
-  OnRotate:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: RotatePipeOnClick+OnClickRotate, Assembly-CSharp, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!1 &1160804595
 GameObject:
   m_ObjectHideFlags: 0
@@ -4993,11 +5108,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_angleOfRotation: 90
-  OnRotate:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: RotatePipeOnClick+OnClickRotate, Assembly-CSharp, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!1 &1202477080
 GameObject:
   m_ObjectHideFlags: 0
@@ -5987,6 +6097,100 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1441359354}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1463541089
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1463541093}
+  - component: {fileID: 1463541092}
+  - component: {fileID: 1463541091}
+  - component: {fileID: 1463541090}
+  m_Layer: 0
+  m_Name: Texts
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1463541090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1463541089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1301386320, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &1463541091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1463541089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 0
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+--- !u!223 &1463541092
+Canvas:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1463541089}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
+--- !u!224 &1463541093
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1463541089}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_Children:
+  - {fileID: 1114200506}
+  m_Father: {fileID: 0}
+  m_RootOrder: 22
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
 --- !u!1 &1466746032
 GameObject:
   m_ObjectHideFlags: 0
@@ -6155,6 +6359,34 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1483544400}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1566067484
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1566067485}
+  m_Layer: 0
+  m_Name: Objectif
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1566067485
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1566067484}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 24
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1593315453
 Prefab:
   m_ObjectHideFlags: 0
@@ -6241,11 +6473,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_angleOfRotation: 90
-  OnRotate:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: RotatePipeOnClick+OnClickRotate, Assembly-CSharp, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!1 &1600084279
 GameObject:
   m_ObjectHideFlags: 0
@@ -6500,11 +6727,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_angleOfRotation: 90
-  OnRotate:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: RotatePipeOnClick+OnClickRotate, Assembly-CSharp, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!1001 &1653015050
 Prefab:
   m_ObjectHideFlags: 0
@@ -6591,11 +6813,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_angleOfRotation: 90
-  OnRotate:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: RotatePipeOnClick+OnClickRotate, Assembly-CSharp, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
+--- !u!114 &1653015057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1653015051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8ebff90a13edcc4db4d2e75f5e7eaca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_pipeToTouch: {fileID: 1087746565}
+  m_solved: 0
 --- !u!1 &1679770478
 GameObject:
   m_ObjectHideFlags: 0
@@ -7328,22 +7558,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_angleOfRotation: 90
-  OnRotate:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1882994223}
-        m_MethodName: RotatePipe
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: RotatePipeOnClick+OnClickRotate, Assembly-CSharp, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!1 &1884393799
 GameObject:
   m_ObjectHideFlags: 0
@@ -7680,6 +7894,68 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1947661102}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1960637006
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1960637009}
+  - component: {fileID: 1960637008}
+  - component: {fileID: 1960637007}
+  m_Layer: 0
+  m_Name: EventSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1960637007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1960637006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1077351063, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalAxis: Horizontal
+  m_VerticalAxis: Vertical
+  m_SubmitButton: Submit
+  m_CancelButton: Cancel
+  m_InputActionsPerSecond: 10
+  m_RepeatDelay: 0.5
+  m_ForceModuleActive: 0
+--- !u!114 &1960637008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1960637006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -619905303, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 5
+--- !u!4 &1960637009
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1960637006}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 23
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1986375222
 GameObject:
   m_ObjectHideFlags: 0
@@ -7850,11 +8126,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_angleOfRotation: 90
-  OnRotate:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: RotatePipeOnClick+OnClickRotate, Assembly-CSharp, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!1 &2000001299
 GameObject:
   m_ObjectHideFlags: 0
