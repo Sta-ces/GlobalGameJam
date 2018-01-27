@@ -9,6 +9,6 @@ public class RotatePipeOnClick : MonoBehaviour {
 
     public void OnMouseDown()
     {
-        gameObject.transform.Rotate(transform.rotation.x, m_angleOfRotation, transform.rotation.z);
+        gameObject.transform.Rotate(m_angleOfRotation, transform.rotation.y, transform.rotation.z);
     }
 }
