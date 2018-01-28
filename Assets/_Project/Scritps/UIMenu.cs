@@ -2,16 +2,21 @@
 
 public class UIMenu : MonoBehaviour {
 
-    public float m_sizeToScale = 2f;
+    public AudioClip m_SoundEffect_Over;
 
 
-    private void OnMouseOver()
+    public void OnMouseOver()
     {
-        transform.localScale += Vector3.one * m_sizeToScale;
+        m_audioSource.clip = m_SoundEffect_Over;
+        m_audioSource.Play();
     }
 
-    private void OnMouseExit()
+
+    private void Awake()
     {
-        transform.localScale = Vector3.one;
+        m_audioSource = GetComponent<AudioSource>();
     }
+
+
+    private AudioSource m_audioSource;
 }

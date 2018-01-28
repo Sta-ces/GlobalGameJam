@@ -6,7 +6,7 @@ public class GameFinish : MonoBehaviour {
     public Text m_textWin;
     public string m_textToDisplay = "You Win!";
 
-    public GameObject m_menuInGame;
+    public GameObject m_menuYouWin;
 
 
     private void Awake()
@@ -29,7 +29,7 @@ public class GameFinish : MonoBehaviour {
             if (pipe.m_solved)
                 countSolved++;
         }
-
+        
         if (countSolved == m_pipes.Length)
             GameIsFinished();
     }
@@ -37,6 +37,7 @@ public class GameFinish : MonoBehaviour {
     private void GameIsFinished()
     {
         m_textWin.text = m_textToDisplay;
+        m_menuYouWin.SetActive(true);
     }
 
 
