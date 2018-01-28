@@ -1,8 +1,10 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 public class Solutions : MonoBehaviour {
 
-    public GameObject m_pipeToTouch;
+    public GameObject m_ObjectToConnect1;
+    public GameObject m_ObjectToConnect2;
     public bool m_solved;
 
     public void PipeSolved(bool _bool)
@@ -12,11 +14,33 @@ public class Solutions : MonoBehaviour {
 
     private void Update()
     {
-        float hitInfo = Vector3.Dot(transform.forward, (m_pipeToTouch.transform.position - transform.position).normalized);
+        int countTrigger = 0;
 
-        if (hitInfo > 0.75f)
+        foreach(GameObject obj in TriggerList)
+        {
+            if (obj == m_ObjectToConnect1)
+                countTrigger++;
+            if (obj == m_ObjectToConnect2)
+                countTrigger++;
+        }
+
+        if (countTrigger == 2)
             PipeSolved(true);
         else
             PipeSolved(false);
     }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (!TriggerList.Contains(other.gameObject))
+            TriggerList.Add(other.gameObject);
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (TriggerList.Contains(other.gameObject))
+            TriggerList.Remove(other.gameObject);
+    }
+
+    private List<GameObject> TriggerList = new List<GameObject>();
 }

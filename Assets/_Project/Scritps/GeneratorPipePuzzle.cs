@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class GeneratorPipePuzzle : MonoBehaviour {
-
-    public GameObject m_GeneratorMapObject;
+    
     public List<GameObject> m_PrefabsPipes;
+    public string m_NameCubeAutorized = "Floor_topPlateform";
 
     private void Awake()
     {
@@ -13,7 +13,7 @@ public class GeneratorPipePuzzle : MonoBehaviour {
        
         for(int c = 0; c < cube.Length; c++)
         {
-            if (cube[c].name == "Floor_topPlateform")
+            if (cube[c].name == m_NameCubeAutorized)
                 m_cubePlateform.Add(cube[c].gameObject);
         }
     }
