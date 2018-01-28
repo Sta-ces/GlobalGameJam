@@ -8,9 +8,7 @@ public class LoadLevels : MonoBehaviour {
 
     public void LoadLevel(string _sceneName)
     {
-        //yield return new WaitForSeconds(m_TimeToTransition);
         StartCoroutine(LoadYourAsyncScene(_sceneName));
-        //SceneManager.LoadScene(_sceneName);
     }
 
     public void QuitApplication()

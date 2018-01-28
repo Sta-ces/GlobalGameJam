@@ -632,6 +632,17 @@ MonoBehaviour:
           m_StringArgument: ScreenTransitionTrigger
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1365236048}
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: MusicFadeTrigger
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &434648516
@@ -1273,6 +1284,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1365236047}
   - component: {fileID: 1365236046}
+  - component: {fileID: 1365236048}
   m_Layer: 0
   m_Name: Music
   m_TagString: Untagged
@@ -1373,6 +1385,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1365236048
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1365236045}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: aa38827dbebcfe04cb1e34191e37d21b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &1389534189
 GameObject:
   m_ObjectHideFlags: 0
