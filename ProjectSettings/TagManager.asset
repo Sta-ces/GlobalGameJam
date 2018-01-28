@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - PipeZoneAttach
+  - Pipe
   layers:
   - Default
   - TransparentFX

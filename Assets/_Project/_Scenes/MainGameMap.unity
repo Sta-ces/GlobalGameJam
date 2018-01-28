@@ -1045,6 +1045,7 @@ GameObject:
   - component: {fileID: 153573097}
   - component: {fileID: 153573096}
   - component: {fileID: 153573095}
+  - component: {fileID: 153573098}
   m_Layer: 0
   m_Name: Floor(Clone) (5)
   m_TagString: Untagged
@@ -1118,6 +1119,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 153573093}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &153573098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 153573093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e1af39409d228e46b27d35786128e01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  degreesPerSecond: 0
+  amplitude: 0.25
+  frequency: 0.25
 --- !u!1 &154522739
 GameObject:
   m_ObjectHideFlags: 0
@@ -1471,6 +1486,7 @@ GameObject:
   - component: {fileID: 249326369}
   - component: {fileID: 249326368}
   - component: {fileID: 249326367}
+  - component: {fileID: 249326370}
   m_Layer: 0
   m_Name: Floor(Clone) (7)
   m_TagString: Untagged
@@ -1544,6 +1560,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 249326365}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &249326370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 249326365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e1af39409d228e46b27d35786128e01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  degreesPerSecond: 0
+  amplitude: 0.25
+  frequency: 0.25
 --- !u!1 &266835501
 GameObject:
   m_ObjectHideFlags: 0
@@ -2966,6 +2996,7 @@ GameObject:
   - component: {fileID: 609770594}
   - component: {fileID: 609770593}
   - component: {fileID: 609770592}
+  - component: {fileID: 609770595}
   m_Layer: 0
   m_Name: Floor(Clone) (3)
   m_TagString: Untagged
@@ -3039,6 +3070,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 609770590}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &609770595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 609770590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e1af39409d228e46b27d35786128e01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  degreesPerSecond: 0
+  amplitude: 0.25
+  frequency: 0.5
 --- !u!1 &631206636
 GameObject:
   m_ObjectHideFlags: 0
@@ -6166,6 +6211,7 @@ GameObject:
   - component: {fileID: 1236357882}
   - component: {fileID: 1236357881}
   - component: {fileID: 1236357880}
+  - component: {fileID: 1236357883}
   m_Layer: 0
   m_Name: Floor(Clone) (4)
   m_TagString: Untagged
@@ -6239,6 +6285,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1236357878}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1236357883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1236357878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e1af39409d228e46b27d35786128e01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  degreesPerSecond: 0
+  amplitude: 0.25
+  frequency: 0.5
 --- !u!1 &1257852097
 GameObject:
   m_ObjectHideFlags: 0
@@ -8565,6 +8625,7 @@ GameObject:
   - component: {fileID: 1706359690}
   - component: {fileID: 1706359689}
   - component: {fileID: 1706359688}
+  - component: {fileID: 1706359691}
   m_Layer: 0
   m_Name: Floor(Clone) (6)
   m_TagString: Untagged
@@ -8638,6 +8699,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1706359686}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1706359691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1706359686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e1af39409d228e46b27d35786128e01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  degreesPerSecond: 0
+  amplitude: 0.25
+  frequency: 0.25
 --- !u!1 &1727200152
 GameObject:
   m_ObjectHideFlags: 0
